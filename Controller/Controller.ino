@@ -1,4 +1,7 @@
 #include <Servo.h>
+#include <SoftwareSerial.h>
+
+SoftwareSerial BTSerial(2, 3);
 
 Servo base;
 Servo shoulder;
@@ -15,6 +18,8 @@ void setup() {
   pinMode(basePotentio, INPUT);
   pinMode(shoulderPotentio, INPUT);
   pinMode(elbowPotentio, INPUT);
+  BTSerial.begin(9600);
+  Serial.begin(9600);
 }
 
 void loop() {
