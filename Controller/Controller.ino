@@ -9,9 +9,11 @@ Servo elbow;
 
 char data;
 
-int baseVal = 90;
-int shoulderVal = 90;
-int elbowVal = 90;
+const int startingVal = 90;
+
+int baseVal, shoulderVal, elbowVal;
+
+baseVal = shoulderVal = elbowVal = startingVal;
 
 const int MAX_ANGLE = 170;
 const int MIN_ANGLE = 10;
@@ -20,9 +22,9 @@ void setup() {
   BTSerial.begin(9600);
   Serial.begin(9600);
 
-  base.attach(7);
-  shoulder.attach(6);
-  elbow.attach(5);
+  base.attach(10);
+  shoulder.attach(9);
+  elbow.attach(8);
 
   base.write(baseVal);
   shoulder.write(shoulderVal);
