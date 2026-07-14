@@ -9,11 +9,9 @@ Servo elbow;
 
 char data;
 
-const int startingVal = 90;
-
-int baseVal, shoulderVal, elbowVal;
-
-baseVal = shoulderVal = elbowVal = startingVal;
+int baseVal = 90;
+int shoulderVal = 90;
+int elbowVal = 90;
 
 const int MAX_ANGLE = 170;
 const int MIN_ANGLE = 10;
@@ -33,7 +31,6 @@ void setup() {
 
 void loop() {
   if (BTSerial.available() > 0) {
-
     data = BTSerial.read();
     Serial.print("Received data: "); Serial.println(data);
 
@@ -45,11 +42,11 @@ void loop() {
 
     if (data == 'U' && elbowVal < MAX_ANGLE) elbowVal += 5;
     if (data == 'D' && elbowVal > MIN_ANGLE) elbowVal -= 5;
+
+    base.write(baseVal);
+    shoulder.write(shoulderVal);
+    elbow.write(elbowVal);
+
+    delay(50);
   }
-
-  base.write(baseVal);
-  shoulder.write(shoulderVal);
-  elbow.write(elbowVal);
-
-  delay(50);
 }
