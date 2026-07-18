@@ -50,8 +50,8 @@ void loop() {
     if (data == 'u' && elbowVal < MAX_ANGLE) elbowVal += 5;
     if (data == 'd' && elbowVal > MIN_ANGLE) elbowVal -= 5;
 
-    if (data == 'i') digitalWrite(laserPin, 1); // cuz its the closest letter in terms of shape to binary ON
-    if (data == 'o') digitalWrite(laserPin, 0); //same reason as above except binary OFF
+    if (data == '1') digitalWrite(laserPin, 1);
+    if (data == '0') digitalWrite(laserPin, 0);
 
     base.write(baseVal);
     shoulder.write(shoulderVal);
