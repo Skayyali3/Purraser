@@ -41,14 +41,14 @@ void loop() {
     
     Serial.print("Received data: "); Serial.println(data);
 
-    if (data == 'l' && baseVal < MAX_ANGLE) baseVal += 5;
-    if (data == 'r' && baseVal > MIN_ANGLE) baseVal -= 5;
+    if (data == 'l' && baseVal < MAX_ANGLE) baseVal += 15;
+    if (data == 'r' && baseVal > MIN_ANGLE) baseVal -= 15;
 
-    if (data == 'f' && shoulderVal < MAX_ANGLE) shoulderVal += 5;
-    if (data == 'b' && shoulderVal > MIN_ANGLE) shoulderVal -= 5;
+    if (data == 'f' && shoulderVal < MAX_ANGLE) shoulderVal += 15;
+    if (data == 'b' && shoulderVal > MIN_ANGLE) shoulderVal -= 15;
 
-    if (data == 'u' && elbowVal < MAX_ANGLE) elbowVal += 5;
-    if (data == 'd' && elbowVal > MIN_ANGLE) elbowVal -= 5;
+    if (data == 'u' && elbowVal < MAX_ANGLE) elbowVal += 15;
+    if (data == 'd' && elbowVal > MIN_ANGLE) elbowVal -= 15;
 
     if (data == '1') digitalWrite(laserPin, 1);
     if (data == '0') digitalWrite(laserPin, 0);
