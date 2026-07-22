@@ -48,7 +48,7 @@ Purraser's an arm robot with the catch of having a laser in place of a hand and 
 At the end it should look somewhat like this except final stick should be in a T shape position instead of an L shape position:
 
 <image src="images/Overview.jpg" alt="overview" height = 155 width = 155>
-<image src="images/Top_view.jpg" alt="topview" height = 155 width = 155>
+<image src="images/Top_View.jpg" alt="topview" height = 155 width = 155>
 
 ---
 
