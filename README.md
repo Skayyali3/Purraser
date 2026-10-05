@@ -20,7 +20,7 @@ Purraser's an arm robot with the catch of having a laser in place of a hand and 
 
 * 3 or 4 screws
 
-### Pinout
+### Pin out
 
 | Component | Pin Name | Target Pin / Rail | Wire Function / Notes |
 | :--- | :--- | :--- | :--- |
@@ -45,7 +45,7 @@ Purraser's an arm robot with the catch of having a laser in place of a hand and 
 
 
 
-At the end it should look somewhat like this except final stick should be in a T shape position instead of an L shape position:
+At the end it should look somewhat like this except final stick should be in a T shape position instead of an L shape position (final stick middle on edge rather than edge on edge):
 
 <image src="images/Overview.jpg" alt="overview" height = 155 width = 155>
 <image src="images/Top_View.jpg" alt="topview" height = 155 width = 155>
@@ -57,11 +57,11 @@ At the end it should look somewhat like this except final stick should be in a T
 ### Libraries
 
 * **Servo.h:** To control the three servos
-* **SoftwareSerial.h:** To communicate data between the bluetooth application & the Arduino
+* **SoftwareSerial.h:** To communicate data between the Bluetooth application & the Arduino
 
 ### Application
 
-Any serial bluetooth controller application on Android would probs work but I recommend the following due to its customizability:
+Any serial Bluetooth controller application on Android would probably work but I recommend the following due to its customizability:
 [Arduino Bluetooth Controller](https://play.google.com/store/apps/details?id=com.giristudio.hc05.bluetooth.arduino.control&hl=en)
 
 ---
